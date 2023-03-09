@@ -15,9 +15,7 @@ name: Latest Pull Request
 ######################################################
 # Start the job on a pull request to the main branch #
 ######################################################
-on:
-  pull_request:
-    branches: [main]
+on: pull_request
 
 ###############
 # Set the Job #
@@ -60,7 +58,7 @@ jobs:
       - name: Setup Node v16 for Yarn v3
         uses: actions/setup-node@v3
         with:
-          node-version: '16.15.0' # Current LTS version
+          node-version: '16.19.1' # Current LTS version
 
       - name: Enable Corepack for Yarn v3
         run: corepack enable
